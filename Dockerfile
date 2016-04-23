@@ -20,6 +20,11 @@ WORKDIR /home/fuse-2.9.5
 RUN sh configure && make -j8 && make install
 
 WORKDIR /home
+RUN wget http://downloads.plexapp.com/plex-media-server/0.9.9.14.531-7eef8c6/plexmediaserver_0.9.9.14.531-7eef8c6_amd64.deb
+RUN dpkg -i plexmediaserver_0.9.9.14.531-7eef8c6_amd64.deb
+
+WORKDIR /home
 RUN git clone https://github.com/mbartoli/blobfs
 WORKDIR /home/blobfs
 
+EXPOSE 32400
