@@ -6,8 +6,8 @@ if [ $# -ne 2 ]; then
 fi
 
 cat > config.py << EOF
-STORAGE_ACCOUNT_NAME = '$1'
-STORAGE_ACCOUNT_KEY = '$2'
+STORAGE_ACCOUNT_NAME = '$NAME'
+STORAGE_ACCOUNT_KEY = '$KEY'
 SAS = ''
 IS_EMULATED = False
 EOF
