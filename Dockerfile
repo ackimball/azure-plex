@@ -24,7 +24,6 @@ WORKDIR /home
 RUN wget http://downloads.plexapp.com/plex-media-server/0.9.9.14.531-7eef8c6/plexmediaserver_0.9.9.14.531-7eef8c6_amd64.deb
 RUN dpkg -i plexmediaserver_0.9.9.14.531-7eef8c6_amd64.deb
 RUN apt-get install -f
-RUN service plexmediaserver start
 
 WORKDIR /home
 RUN git clone https://github.com/mbartoli/blobfs
