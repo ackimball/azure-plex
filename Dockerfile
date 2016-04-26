@@ -11,7 +11,8 @@ RUN apt-get -y install \
 	vim \
 	avahi-daemon \
 	avahi-utils \
-	python-fuse
+	python-fuse \
+	curl
 RUN pip install azure-storage
 
 WORKDIR /home
@@ -30,6 +31,7 @@ RUN git clone https://github.com/mbartoli/blobfs
 WORKDIR /home/blobfs
 
 EXPOSE 32400
+
 RUN rm config.py
 CMD bash -C 'azureconfig.sh';'bash'
 
